@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0e0e0"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/edtFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:hint="Pon tu fecha de nacimiento"
+        android:inputType="number" />
+
+    <!-- <TextView
+         android:id="@+id/txtedad"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="30dp"
+         android:text="Edad"
+         android:layout_below="@id/edtFecha"
+         android:layout_centerHorizontal="true"/>-->
+
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtFecha"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/colorAccent"
+        android:text="Calucalar"
+        android:textColor="#ffffff" />
+
+    <!-- <Button
+         android:id="@+id/btnSiguiente"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/edtFecha"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="100dp"
+         android:text="Siguiente"
+         android:background="@color/colorAccent"
+         android:textColor="#ffffff"/>-->
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnCalcular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnProgresDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:background="@color/colorAccent"
+            android:text="Progress Dialog"
+            android:textColor="#ffffff" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnListAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:text="List Alert"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/btnSimpleAlert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:background="@color/colorAccent"
+                android:text="simple alert"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Intent´s</string>
+    <string name="main_simple_alert">Hi, do you like anko alert?</string>
+    <string name="main_alert_title">ALERT</string>
+    <string name="main_positivebtn">Awesome</string>
+    <string name="main_negativebnt" translatable="false">oh...</string>
+    <string name="main_alert_lista">Were are you from?</string>
+    <string name="main_lngtst_inicial">Hi, I\'m an Anko toast</string>
+    <string name="main_progres_dialog">Wait a moment..</string>
+    <string name="main_titleDialog">LOADING..</string>
+    <string name="main2_key_edad">age</string>
+    <string name="main3_deneid_permisses">Pemisos denegados</string>
+    <string name="main3_insert_number">You must dial a number</string>
+    <string name="main3_mail_title">Title</string>
+    <string name="main3_mail_body">Body</string>
+    <string name="main3_contactCall_number" translatable="false">51190023</string>
+    <string name="main3_share">Anko is awesome</string>
+    <string name="main3_share_subject">Anko for Android</string>
+    <string name="main3_sms_number" translatable="false">51190023</string>
+    <string name="main3_sms_message">An Anko message</string>
+    <string name="main3_deneidpermision_toast">You have denied permissions</string>
+</resources>

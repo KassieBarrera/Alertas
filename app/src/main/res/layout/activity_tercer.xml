@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TercerActivity">
+
+    <EditText
+        android:id="@+id/edtWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="www.ejemplo.com"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="199dp"
+        android:layout_below="@id/edtPhone"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"/>
+
+    <EditText
+        android:id="@+id/edtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Número de Telefono"
+        android:inputType="phone"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="258dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"/>
+
+    <ImageButton
+        android:id="@+id/imgbtnTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/edtPhone"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/transparent"
+        app:srcCompat="@android:drawable/stat_sys_vp_phone_call"
+        tools:layout_editor_absoluteX="334dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <Button
+        android:id="@+id/btnEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escribeme"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="292dp"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFFF"
+        android:layout_below="@id/btnContactPhone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <ImageButton
+        android:id="@+id/imgbtnWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/edtWeb"
+        android:layout_marginLeft="250dp"
+        android:background="@color/transparent"
+        app:srcCompat="@android:drawable/ic_menu_search"
+        tools:layout_editor_absoluteX="322dp"
+        tools:layout_editor_absoluteY="199dp"
+        android:layout_below="@id/edtPhone"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:id="@+id/btnContactPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Contactame"
+        android:textColor="#FFFF"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="357dp"
+        android:layout_below="@id/edtWeb"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageButton
+        android:id="@+id/imgbtnCamara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnEmail"
+        android:layout_marginTop="212dp"
+        android:background="@color/colorAccent"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="449dp" />
+</RelativeLayout>

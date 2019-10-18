@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Intent´s</string>
+    <string name="main_lngtst_inicial">Hola, soy un toast de anko</string>
+    <string name="main_simple_alert">Hola, te gusta el anko Alert?</string>
+    <string name="main_alert_title">ALERTA</string>
+    <string name="main_positivebtn">Super</string>
+    <string name="main_alert_lista">De donde eres?</string>
+    <string name="main2_key_edad">edad</string>
+    <string name="main3_deneid_permisses">Permisos Denegados</string>
+    <string name="main3_deneidpermision_toast">Has denagado los permisos</string>
+    <string name="main3_insert_number">Debes marcar un número</string>
+    <string name="main3_mail_body">Este es el cuerpo</string>
+    <string name="main3_mail_title">Titulo</string>
+    <string name="main3_share">Anko esta genial</string>
+    <string name="main3_share_subject">Anko para Android</string>
+    <string name="main3_sms_message">Un Anko mensaje</string>
+    <string name="main_progres_dialog">Espera un momento..</string>
+    <string name="main_titleDialog">CARGANDO..</string>
+</resources>
