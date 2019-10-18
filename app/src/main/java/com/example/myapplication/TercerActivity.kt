@@ -39,7 +39,7 @@ class TercerActivity : AppCompatActivity() {
 /*--------------------------------          COMPROBAR EL PERMISO        --------------------------------------*/
                         doFromSdk(Build.VERSION_CODES.LOLLIPOP) {
                             //Pregunta si la version del dispositivo es mayor o igual a a la del codigo
-                           if (verPermiso(Manifest.permission.CALL_PHONE)) {
+                            if (verPermiso(Manifest.permission.CALL_PHONE)) {
                                 /*--------------------------------          SI HA HACEPTADO EL PERMISO EN EL MANIFEST  ----------------------*/
 //                                    Intent(Intent.ACTION_CALL, Uri.parse("tel:" + numero))
                                 if (ActivityCompat.checkSelfPermission(
@@ -49,8 +49,8 @@ class TercerActivity : AppCompatActivity() {
                                 ) {
                                     return
                                 }
-                               // startActivity(intetAceptado)
-                               makeCall(numero)
+                                // startActivity(intetAceptado)
+                                makeCall(numero)
                             } else {
 /*---------------------------------     PREGUNTARLE POR EL PERMISO      -----------------------------------------*/
                                 if (!shouldShowRequestPermissionRationale(Manifest.permission.CALL_PHONE)) {
@@ -92,7 +92,7 @@ class TercerActivity : AppCompatActivity() {
                 //val intentCall = Intent(Intent.ACTION_CALL, Uri.parse("tel:" + phoneNumber))
                 if (verPermiso(Manifest.permission.CALL_PHONE)) {
                     if (ActivityCompat.checkSelfPermission(
-                            this@TercerActivity,Manifest.permission.CALL_PHONE
+                            this@TercerActivity, Manifest.permission.CALL_PHONE
                         ) != PackageManager.PERMISSION_GRANTED
                     ) {
                         return
@@ -139,24 +139,31 @@ class TercerActivity : AppCompatActivity() {
         }
 
     }
-/*------------------------------        PARA HABILITAR EL MENU          --------------------------------------*/
-    override fun onCreateOptionsMenu(menu : Menu):Boolean {
+
+    /*------------------------------        PARA HABILITAR EL MENU          --------------------------------------*/
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.menu_contactos ->{
-                val intentContactos = Intent(Intent.ACTION_VIEW, Uri.parse("content://contacts/people"))
+        when (item.itemId) {
+            R.id.menu_contactos -> {
+                val intentContactos =
+                    Intent(Intent.ACTION_VIEW, Uri.parse("content://contacts/people"))
                 startActivity(intentContactos)
             }
-        R.id.menu_compartir ->{ share(getString(R.string.main3_share), getString(R.string.main3_share_subject))}
-        R.id.menu_mensaje ->{ sendSMS(getString(R.string.main3_sms_number), getString(R.string.main3_sms_message))}
+            R.id.menu_compartir -> {
+                share(getString(R.string.main3_share), getString(R.string.main3_share_subject))
+            }
+            R.id.menu_mensaje -> {
+                sendSMS(getString(R.string.main3_sms_number), getString(R.string.main3_sms_message))
+            }
         }
         return super.onOptionsItemSelected(item)
     }
-/*------------------------------------  Metodo para compobrar permisos  --------------------------------------*/
+
+    /*------------------------------------  Metodo para compobrar permisos  --------------------------------------*/
     override fun onRequestPermissionsResult(
         requestCode: Int,
         permissions: Array<out String>,
@@ -173,7 +180,10 @@ class TercerActivity : AppCompatActivity() {
                     if (resultados == PackageManager.PERMISSION_GRANTED) {
 /*------------------------------------  CONCEDIO SU PERMISO     ------------------------------------------------*/
                         val phoneNumber = edtPhone.text.toString()
-                        val intentCall = Intent(Intent.ACTION_CALL, Uri.parse("tel" + phoneNumber))  //Uri indicando que rol va a jugar en el protocolo
+                        val intentCall = Intent(
+                            Intent.ACTION_CALL,
+                            Uri.parse("tel" + phoneNumber)
+                        )  //Uri indicando que rol va a jugar en el protocolo
 /*---------------------------------     VERIFICAR SI EXISTE EL PERMISO EN EL MANIFEST EXPLICITAMENTE
                        * YA QUE EL USUARIO PUEDE DENEGARLO      --------------------------------------------------*/
                         if (ActivityCompat.checkSelfPermission(
@@ -186,7 +196,11 @@ class TercerActivity : AppCompatActivity() {
                         startActivity(intentCall)
                     } else {
 /*--------------------------------      SE DENEGO EL PERMISO    -------------------------------------------------*/
-                        Toast.makeText(this, getString(R.string.main3_deneidpermision_toast), Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            this,
+                            getString(R.string.main3_deneidpermision_toast),
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
             }
